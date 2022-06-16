@@ -47,13 +47,15 @@ class MyApp extends StatelessWidget {
                 onPressed: conversationsNotifier.identity.isNotEmpty &&
                         !conversationsNotifier.isClientInitialized
                     ? () async {
-                        // <Set your JWT token here>
-                        String? jwtToken;
+                        print('lg enter asyn');
+
+                        String? jwtToken =
+                            'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzUzOTNlMDQzYzZjOGM2ODVkN2IwZWI0MDRjMjM3ODJhLTE2NTUxMjk0NjIiLCJpc3MiOiJTSzUzOTNlMDQzYzZjOGM2ODVkN2IwZWI0MDRjMjM3ODJhIiwic3ViIjoiQUM3OGFmNDMxNjI2YTk2ZTM0ZGEzNzJmYWUxYWE2NTU2NSIsImV4cCI6MTY1NTIxMjI2MiwiZ3JhbnRzIjp7ImlkZW50aXR5Ijoic2FudGlhZ29nMDhAcmVmdW5kby5jb20iLCJjaGF0Ijp7InNlcnZpY2Vfc2lkIjoiSVNmOGRjZjlhYzZiMzY0Zjk5YjE0Nzk2NTg1ZTk4Yjk1OCIsImVuZHBvaW50X2lkIjoiY29ubmVjdC1zdGFnaW5nOnNhbnRpYWdvZzA4QHJlZnVuZG8uY29tOm1vYmlsZSIsInB1c2hfY3JlZGVudGlhbF9zaWQiOiJDUjQ1ZDRjY2Y2NWQyZGM5Njk2OTIwMWY5ZTZkNzk0YzdjIn19fQ.nZb0vktxEyFnO-BG_Q6uj2i5QTMuyl5DUxxxHZgSu-Q';
                         // jwtToken = (await BackendService.createToken(
                         //         TwilioChatTokenRequest(
                         //             identity: conversationsNotifier.identity)))
                         //     ?.token;
-
+                        print('lg jwtToken $jwtToken');
                         if (jwtToken == null) {
                           return;
                         }
